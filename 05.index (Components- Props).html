@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React-Sololearn</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script type="text/babel">
+
+        //App Component:
+        function App(){
+            return(
+                <div>
+                    <div style={{border:"2px solid purple"}}>
+                        <Hello name="Fahri" fname="Ali"  />
+                        <Frage frage="Where"  />
+                    </div>
+                    <div >
+                        <Hello name="Onur" fname="Veli" />
+                        <Frage frage="Who"  />
+                    </div>
+                    <div style={{border:"2px solid purple"}}>
+                        <Hello name="Sezai" fname="Deli" />
+                        <Frage frage="Why"  />
+                    </div>
+                </div>
+            );
+        }
+        //Frage Component:
+        function Frage (props) { 
+            return (
+                <h2 style={{color: "red"}}>{props.frage} are you?</h2>
+            );
+        };
+
+    	//Hello Component:
+        function Hello (props){
+				return (<div >
+                    <h1> Hello, {props.name}</h1>
+                    <h1> I am {props.fname}</h1>
+                    </div>
+                );
+		};
+                
+        
+        ReactDOM.render(<App />, document.getElementById('container')) 
+        
+        
+        </script>
+    </body>
+</html>

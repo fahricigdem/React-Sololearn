@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React-Sololearn</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script type="text/babel">
+
+		//Hello Component:
+       class Hello extends React.Component {
+          render() {
+            return <p>Hello, {this.props.name}!</p>;
+            }
+        }
+
+        //App Component:
+        function App(){
+            return(
+                <div>
+                <Hello name="Fahri"  />
+                <Hello name="Onur"  />
+                <Hello name="Sezai"  />
+                </div>
+            );
+        }
+
+		const el = <App />; 
+        ReactDOM.render(el, document.getElementById('container')) 
+        
+        </script>
+    </body>
+</html>
